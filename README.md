@@ -71,24 +71,26 @@ The following data-quality checks were performed:
 
 ## 🧹 Data Cleaning Performed
 
-### Missing Values
+### 1. Missing Values
 
 Genuine missing values were retained because reliable replacement information was not available.
 
 **Total missing cells:** 4,307
 
-### Duplicate Records
+### 2. Duplicate Records
+
+The dataset was checked for both exact duplicate rows and duplicate `show_id` values.
 
 - Exact duplicate rows: **0**
 - Duplicate `show_id` values: **0**
 
-### Whitespace Standardization
+### 3. Whitespace Standardization
 
 Leading, trailing, non-breaking, and repeated whitespace was standardized across relevant text columns.
 
 **Whitespace issues identified:** 119 cells
 
-### Incorrectly Placed Duration Values
+### 4. Incorrectly Placed Duration Values
 
 Three movie duration values were incorrectly stored in the `rating` column.
 
@@ -96,12 +98,12 @@ These values were moved to the `duration` column, while the corresponding rating
 
 **Corrected records:** 3
 
-### Data Type Correction
+### 5. Data Type Correction
 
 - `date_added` → datetime
 - `release_year` → nullable integer (`Int64`)
 
-### Date Standardization
+### 6. Date Standardization
 
 The cleaned dataset was exported using the standardized date format:
 
@@ -129,7 +131,7 @@ The cleaned dataset was exported using the standardized date format:
 | 📓 [Cleaning Notebook](./notebooks/SWYNEX_Task_1_Data_Cleaning.ipynb) | Complete Python/Pandas cleaning workflow |
 | 📂 [Cleaned Dataset](./data/netflix_titles_cleaned.csv) | Final validated dataset |
 | 📄 [Raw Dataset](./data/netflix_titles.csv) | Original dataset used for the task |
-| 📋 [Requirements](./requirements.txt) | Python dependency used in the project |
+| 📋 [Requirements](./requirements.txt) | Python dependency information |
 
 ---
 
@@ -144,19 +146,33 @@ SWYNEX-Data-Cleaning-Preparation/
 │
 ├── notebooks/
 │   └── SWYNEX_Task_1_Data_Cleaning.ipynb
-└── requirements.txt
-
----
-
-## ✅ Results & Conclusion
+│
+└── requirements.txt## ✅ Results & Conclusion
 
 The Netflix Movies and TV Shows dataset was successfully inspected, cleaned, and validated using Python and Pandas.
 
-The cleaning process addressed formatting issues, incorrect data types, and three incorrectly placed duration values.
+The cleaning process addressed:
+
+- Whitespace and formatting inconsistencies
+- Incorrect data types
+- Incorrectly placed duration values
+- Date formatting
+- Rating and duration consistency
+
+Three duration values that were incorrectly stored in the `rating` column were identified and moved to the `duration` column without creating or assuming any rating information.
 
 The original dataset structure was preserved with **8,807 rows and 12 columns**.
 
-No duplicate records were found, while genuine missing values were retained instead of being artificially filled.
+### Final Validation
+
+- **Exact duplicate rows:** 0
+- **Duplicate `show_id` values:** 0
+- **Duration-like values remaining in `rating`:** 0
+- **Total missing cells:** 4,307
+- **Rows preserved:** 8,807
+- **Columns preserved:** 12
+
+Genuine missing values were retained because reliable source information was not available. No unsupported values were artificially created.
 
 The final cleaned dataset was exported as:
 
@@ -168,16 +184,15 @@ The final cleaned dataset was exported as:
 
 **Internship:** Data Analyst Internship  
 **Company:** SWYNEX Technologies  
-**Task:** Task 1 - Data Cleaning & Preparation
+**Task:** Task 1 - Data Cleaning & Preparation  
+**Author:** **Shaswat Singh**
 
-**Author:** Shaswat Singh
-
-**LinkedIn:** [Shaswat Singh](https://www.linkedin.com/in/shaswatsinghda27)
+🔗 **[LinkedIn Profile](https://www.linkedin.com/in/shaswatsinghda27/)**
 
 ---
 
-### ⭐ Project Repository
+## ⭐ Project Repository
 
-**SWYNEX Technologies - Data Cleaning & Preparation**
+🔗 **[View Complete GitHub Repository](https://github.com/shaswatsingh-analytics/SWYNEX-Data-Cleaning-Preparation)**
 
-This repository contains the complete notebook, raw dataset, cleaned dataset, and project documentation.
+This repository contains the complete notebook, raw dataset, cleaned dataset, requirements file, and project documentation.
