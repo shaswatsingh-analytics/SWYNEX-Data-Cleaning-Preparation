@@ -137,7 +137,7 @@ The cleaned dataset was exported using the standardized date format:
 
 ## 📁 Project Structure
 
-```text
+``text
 SWYNEX-Data-Cleaning-Preparation/
 │
 ├── data/
@@ -176,7 +176,7 @@ Genuine missing values were retained because reliable source information was not
 
 The final cleaned dataset was exported as:
 
-`netflix_titles_cleaned.csv`
+netflix_titles_cleaned.csv
 
 ---
 
